@@ -1,7 +1,7 @@
+import s from "./ContactList.module.css";
 import Contact from "../Contact/Contact";
 const ContactList = ({ contacts, onDelete }) => (
-  <div>
-    <h2>Contact List</h2>
+  <div className={s.contactList}>
     {contacts.map((contact) => (
       <Contact key={contact.id} {...contact} onDelete={onDelete} />
     ))}
